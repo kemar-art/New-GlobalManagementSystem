@@ -1,0 +1,115 @@
+﻿@model IEnumerable<EmployeeVM>
+
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<h1>Employees</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Firstname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lastname)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TRN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NIS)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datestarted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateEnded)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Firstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lastname)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TRN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NIS)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+           <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+             @*<td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datestarted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateEnded)
+            </td>*@
+            <td>
+               <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id"><i class="fa-solid fa-pen-to-square"></i></a> &nbsp;
+               <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i></a> &nbsp;
+               <button data-id="@item.Id" class="btn btn-danger deleteBtn" type="button"><i class="fa-solid fa-trash-can"></i></button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
+<form id="deleteForm" asp-action="Delete" >
+        <input type="hidden" id="employeeId" name="Id"/>
+ </form>
+
+@section Scripts{
+    <script>
+        $(function(){
+            $('.table').DataTable();
+            $('.deleteBtn').click(function(e){
+                swal({
+                    title: "Your about to delete an record!!!",
+                    text: "Are you sure you want to deleted this recard?",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true
+                }).then((confirm) =>{
+                    if(confirm){
+                        var btn = $(this);
+                        var id = btn.data("id");
+                        $('#employeeId').val(id);
+                        $('#deleteForm').submit();
+                    }
+                });
+            });
+        });
+    </script>
+}

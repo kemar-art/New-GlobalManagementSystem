@@ -1,0 +1,81 @@
+﻿@model EmployeeVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Employee Details</h4>
+<hr />
+<div class="row">
+    <div>
+        <form asp-action="Edit" class="row g-3">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            
+            <div class="col-md-6">
+                <label asp-for="Firstname" class="control-label"></label>
+                <input asp-for="Firstname" class="form-control" />
+                <span asp-validation-for="Firstname" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Lastname" class="control-label"></label>
+                <input asp-for="Lastname" class="form-control" />
+                <span asp-validation-for="Lastname" class="text-danger"></span>
+            </div>
+            <div class="col-md-3">
+                <label asp-for="DateOfBirth"></label>
+                <input  class="form-control datepicker"  
+                type="text" placeholder="yyyy-MM-dd" aria-required="true" />
+                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+            </div>
+            <br/>
+            <div class="col-md-3">
+                <label asp-for="TRN" class="control-label"></label>
+                <input asp-for="TRN" class="form-control" />
+                <span asp-validation-for="TRN" class="text-danger"></span>
+            </div>
+            <br/>
+            <div class="col-md-3">
+                <label asp-for="NIS" class="control-label"></label>
+                <input asp-for="NIS" class="form-control" />
+                <span asp-validation-for="NIS" class="text-danger"></span>
+            </div>
+             <br/>
+             <div class="col-md-3">
+                <label asp-for="Datestarted" class="control-label" date></label>
+                <input  class="form-control datepicker"
+                type="text" placeholder="yyyy-MM-dd" aria-required="true"/>
+                <span asp-validation-for="Datestarted" class="text-danger"></span>
+            </div>
+             <div class="col-md-12">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <br/>
+            <div div class="col-md-4">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                 <label asp-for="DateEnded" class="control-label"></label>
+                <input  class="form-control datepicker"
+                type="text" placeholder="yyyy-MM-dd" aria-required="true"/>
+                <span asp-validation-for="DateEnded" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <a asp-action="Index" class="btn btn-dark">Back to List</a> &nbsp;
+               <input type="submit" value="Save Changes" class="btn text-dark btn-warning" />
+            </div>
+        </form>
+    </div>
+</div>
+

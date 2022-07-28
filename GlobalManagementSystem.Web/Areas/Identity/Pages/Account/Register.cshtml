@@ -1,0 +1,88 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+@*<h1>@ViewData["Title"]</h1>*@
+
+<div class="row">
+        <form class="row g-3" id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h2>Create a new account.</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-md-6">
+                <label asp-for="Input.Firstname"></label>
+                <input asp-for="Input.Firstname " class="form-control" aria-required="true" />
+                <span asp-validation-for="Input.Firstname " class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Input.Lastname "></label>
+                <input asp-for="Input.Lastname " class="form-control" aria-required="true" />
+                <span asp-validation-for="Input.Lastname " class="text-danger"></span>
+            </div>
+            <div class="col-md-3">
+                <label asp-for="Input.DateOfBirth"></label>
+                <input  class="form-control datepicker"  
+                type="text" placeholder="yyyy-MM-dd" aria-required="true" />
+                <span asp-validation-for="Input.DateOfBirth" class="text-danger"></span>
+            </div>
+            <br/>
+            <div class="col-md-3">
+                <label asp-for="Input.TRN"></label>
+                <input asp-for="Input.TRN" class="form-control" aria-required="true" />
+                <span asp-validation-for="Input.TRN" class="text-danger"></span>
+            </div>
+            <br/>
+            <div class="col-md-3">
+                <label asp-for="Input.NIS"></label>
+                <input asp-for="Input.NIS" class="form-control" aria-required="true" />
+                <span asp-validation-for="Input.NIS" class="text-danger"></span>
+            </div>
+             <br/>
+            <div class="col-md-3">
+                <label asp-for="Input.Datestarted"></label>
+                <input  class="form-control datepicker"  
+                type="text" placeholder="yyyy-MM-dd" aria-required="true" />
+                <span asp-validation-for="Input.Datestarted" class="text-danger"></span>
+            </div>
+             <div class="col-md-12">
+                <label asp-for="Input.Address"></label>
+                <input asp-for="Input.Address" class="form-control" aria-required="true" />
+                <span asp-validation-for="Input.Address" class="text-danger"></span>
+            </div>
+            <div div class="col-md-4">
+                <label asp-for="Input.Phone"></label>
+                <input asp-for="Input.Phone" class="form-control" aria-required="true" />
+                <span asp-validation-for="Input.Phone" class="text-danger"></span>
+            </div>
+            <br/>
+            <div div class="col-md-4">
+                <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="form-control" aria-required="true" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+             <div class="col-md-4">
+                 <label>Job Title</label>
+                <select asp-for="Input.RoleId" class="form-select" placeholder="Username" 
+                asp-items="Model.Input.RolesList" aria-required="true"></select>
+                <span asp-validation-for="Input.RolesList" class="text-danger"></span>
+            </div>
+             <div class="col-md-6">
+                 <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="form-control"  aria-required="true" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <br/>
+            <div class="col-md-6">
+                <label asp-for="Input.ConfirmPassword"></label>
+                <input asp-for="Input.ConfirmPassword" class="form-control"  aria-required="true" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+             <button id="registerSubmit" type="submit" class=" col-md-2 btn 
+              btn-lg btn-primary">Register</button>
+        </form>
+    </div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

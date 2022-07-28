@@ -1,0 +1,105 @@
+﻿@model IEnumerable<ProductVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Parts</h1>
+
+<p>
+    <a class="btn btn-success" asp-action="Create">
+        <i class="fa-solid fa-plus"></i> Create New
+    </a>
+</p>
+
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Model.ProductType.Make.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model.ProductType.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Condition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Serialnumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Unitcost)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model.ProductType.Make.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model.ProductType.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Condition.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model.Name)
+            </td>
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.Serialnumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unitcost)
+            </td>
+            <td>
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">
+                    <i class="fa-solid fa-pen-to-square"></i></a> &nbsp;
+
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">
+                    <i class="fa-solid fa-circle-info"></i></a> &nbsp;
+
+                <button data-id="@item.Id" class="btn btn-danger deleteBtn" type="button">
+                    <i class="fa-solid fa-trash-can"></i></button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
+<form id="deleteForm" asp-action="Delete">
+        <input type="hidden" id="productId" name="Id"/>
+ </form>
+
+@section Scripts{
+    <script>
+        $(function(){
+            $('.table').DataTable();
+            $('.deleteBtn').click(function(e){
+                swal({
+                    title: "Your about to delete an record!!!",
+                    text: "Are you sure you want to deleted this recard?",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true
+                }).then((confirm) =>{
+                    if(confirm){
+                        var btn = $(this);
+                        var id = btn.data("id");
+                        $('#productId').val(id);
+                        $('#deleteForm').submit();
+                    }
+                });
+            });
+        });
+    </script>
+}
