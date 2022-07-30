@@ -156,7 +156,7 @@ namespace GlobalManagementSystem.Web.Migrations
                         {
                             Id = "ef7547bf-bd4d-485c-b761-a211dd47fa9a",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8bb80c5d-16fa-4db5-9374-a4d8c4276b03",
+                            ConcurrencyStamp = "c213b0b2-487b-40d1-a90e-2641291b04f9",
                             DateEnded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Datestarted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -167,9 +167,9 @@ namespace GlobalManagementSystem.Web.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@LOCALHOST.COM",
                             NormalizedUserName = "ADMIN@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEEmIx4wehVRA9a7r5D5CFpdScVYQ9dcz73JWavpU+cUQ0kabOY9ILoJ9g1cIha/q9w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEO/BrNF4qmqDA8oiiEuAH/uwE3lVrZmIEOx9bO0ZD5oGwxLTjsXACG7RMRtHv6YX4A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "799660af-3ef7-4a5c-ab45-0d2cdb8d22e9",
+                            SecurityStamp = "06906982-8b37-4db6-acbd-e541268ddd01",
                             TwoFactorEnabled = false,
                             UserName = "admin@localhost.com"
                         },
@@ -177,7 +177,7 @@ namespace GlobalManagementSystem.Web.Migrations
                         {
                             Id = "0f127aa8-a53b-471f-ab80-877381474d56",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1ce7303c-58f6-4620-be4a-01858b0d130f",
+                            ConcurrencyStamp = "002eaa41-dc72-42e3-ba6c-2775b2842f35",
                             DateEnded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Datestarted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -188,9 +188,9 @@ namespace GlobalManagementSystem.Web.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@LOCALHOST.COM",
                             NormalizedUserName = "USER@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBCDBZyX9urR2okCzTolyzcEPZTgdYZWXTjo9i1oEk4BLDu7dfadv3mPJS+4wQPEQQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEH76x28x6n0KAHjR67VdW67vETK0RWnwU4yTbquIvWKcb3rAp/rGVCXmDIa/5xeR+A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "59d8a063-7156-4586-8979-b0b6d8c8ebd8",
+                            SecurityStamp = "00e84041-2b4e-48eb-8f92-18c22439e6b9",
                             TwoFactorEnabled = false,
                             UserName = "user@localhost.com"
                         });
@@ -451,14 +451,14 @@ namespace GlobalManagementSystem.Web.Migrations
                         new
                         {
                             Id = "cac43a6e-f7bb-4448-baaf-1add431ccbbf",
-                            ConcurrencyStamp = "17ff9d73-7b0a-45e1-8d80-82a36a414dca",
+                            ConcurrencyStamp = "dae8d1ad-7d62-4a9f-bbbe-652926af3ee3",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "eba7548ff-da7d-475a-b17c-a200ad79f77a",
-                            ConcurrencyStamp = "93f22c23-fc85-4cbe-b32f-03f3ab51dbd9",
+                            ConcurrencyStamp = "386141ae-3b26-4f83-9208-dff49de9ad29",
                             Name = "User",
                             NormalizedName = "USER"
                         });

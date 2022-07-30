@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GlobalManagementSystem.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220728013206_Firstupdat")]
-    partial class Firstupdat
+    [Migration("20220729164757_workingfromanothermachine")]
+    partial class workingfromanothermachine
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,13 +50,15 @@ namespace GlobalManagementSystem.Web.Migrations
                         {
                             Id = 1,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "New"
                         },
                         new
                         {
                             Id = 2,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Used"
                         });
                 });
 
@@ -156,7 +158,7 @@ namespace GlobalManagementSystem.Web.Migrations
                         {
                             Id = "ef7547bf-bd4d-485c-b761-a211dd47fa9a",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b2250570-1840-484e-8f6f-dd8198be6ee5",
+                            ConcurrencyStamp = "c213b0b2-487b-40d1-a90e-2641291b04f9",
                             DateEnded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Datestarted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -167,9 +169,9 @@ namespace GlobalManagementSystem.Web.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@LOCALHOST.COM",
                             NormalizedUserName = "ADMIN@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEC/qLphIYYIxopCOjPTNWraIYrYav6H7Qm4JT1ejb6ekBKo2mknsFuVhW0KyPCyUZA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEO/BrNF4qmqDA8oiiEuAH/uwE3lVrZmIEOx9bO0ZD5oGwxLTjsXACG7RMRtHv6YX4A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "49263707-c8f9-4b28-a8d6-ff3aed79ec39",
+                            SecurityStamp = "06906982-8b37-4db6-acbd-e541268ddd01",
                             TwoFactorEnabled = false,
                             UserName = "admin@localhost.com"
                         },
@@ -177,7 +179,7 @@ namespace GlobalManagementSystem.Web.Migrations
                         {
                             Id = "0f127aa8-a53b-471f-ab80-877381474d56",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9c81ae33-48f5-418d-994d-91207931a4c6",
+                            ConcurrencyStamp = "002eaa41-dc72-42e3-ba6c-2775b2842f35",
                             DateEnded = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Datestarted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -188,9 +190,9 @@ namespace GlobalManagementSystem.Web.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@LOCALHOST.COM",
                             NormalizedUserName = "USER@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIWj2KKJ/UMbtU9W4q30JbyYVre0rY5HXnbLMLgLRjIX5DRGYmMbAuVLUbWH/Z9T8w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEH76x28x6n0KAHjR67VdW67vETK0RWnwU4yTbquIvWKcb3rAp/rGVCXmDIa/5xeR+A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "23fc77cb-f69b-456b-a1a0-5a01aa2be5db",
+                            SecurityStamp = "00e84041-2b4e-48eb-8f92-18c22439e6b9",
                             TwoFactorEnabled = false,
                             UserName = "user@localhost.com"
                         });
@@ -451,14 +453,14 @@ namespace GlobalManagementSystem.Web.Migrations
                         new
                         {
                             Id = "cac43a6e-f7bb-4448-baaf-1add431ccbbf",
-                            ConcurrencyStamp = "88417fda-4a53-4149-8798-bac3269a323c",
+                            ConcurrencyStamp = "dae8d1ad-7d62-4a9f-bbbe-652926af3ee3",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "eba7548ff-da7d-475a-b17c-a200ad79f77a",
-                            ConcurrencyStamp = "4aaecdef-a7b1-46ec-8d10-ac6d91a95e34",
+                            ConcurrencyStamp = "386141ae-3b26-4f83-9208-dff49de9ad29",
                             Name = "User",
                             NormalizedName = "USER"
                         });

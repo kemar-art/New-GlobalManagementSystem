@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GlobalManagementSystem.Web.Migrations
 {
-    public partial class Firstupdat : Migration
+    public partial class workingfromanothermachine : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -349,8 +349,8 @@ namespace GlobalManagementSystem.Web.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "cac43a6e-f7bb-4448-baaf-1add431ccbbf", "88417fda-4a53-4149-8798-bac3269a323c", "Administrator", "ADMINISTRATOR" },
-                    { "eba7548ff-da7d-475a-b17c-a200ad79f77a", "4aaecdef-a7b1-46ec-8d10-ac6d91a95e34", "User", "USER" }
+                    { "cac43a6e-f7bb-4448-baaf-1add431ccbbf", "dae8d1ad-7d62-4a9f-bbbe-652926af3ee3", "Administrator", "ADMINISTRATOR" },
+                    { "eba7548ff-da7d-475a-b17c-a200ad79f77a", "386141ae-3b26-4f83-9208-dff49de9ad29", "User", "USER" }
                 });
 
             migrationBuilder.InsertData(
@@ -358,8 +358,8 @@ namespace GlobalManagementSystem.Web.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "Address", "ConcurrencyStamp", "DateEnded", "DateOfBirth", "Datestarted", "Email", "EmailConfirmed", "Firstname", "Lastname", "LockoutEnabled", "LockoutEnd", "NIS", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "Phone", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TRN", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "0f127aa8-a53b-471f-ab80-877381474d56", 0, null, "9c81ae33-48f5-418d-994d-91207931a4c6", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "user@localhost.com", true, "User", "User", false, null, null, "USER@LOCALHOST.COM", "USER@LOCALHOST.COM", "AQAAAAEAACcQAAAAEIWj2KKJ/UMbtU9W4q30JbyYVre0rY5HXnbLMLgLRjIX5DRGYmMbAuVLUbWH/Z9T8w==", null, null, false, "23fc77cb-f69b-456b-a1a0-5a01aa2be5db", null, false, "user@localhost.com" },
-                    { "ef7547bf-bd4d-485c-b761-a211dd47fa9a", 0, null, "b2250570-1840-484e-8f6f-dd8198be6ee5", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin@localhost.com", true, "Admin", "Admin", false, null, null, "ADMIN@LOCALHOST.COM", "ADMIN@LOCALHOST.COM", "AQAAAAEAACcQAAAAEC/qLphIYYIxopCOjPTNWraIYrYav6H7Qm4JT1ejb6ekBKo2mknsFuVhW0KyPCyUZA==", null, null, false, "49263707-c8f9-4b28-a8d6-ff3aed79ec39", null, false, "admin@localhost.com" }
+                    { "0f127aa8-a53b-471f-ab80-877381474d56", 0, null, "002eaa41-dc72-42e3-ba6c-2775b2842f35", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "user@localhost.com", true, "User", "User", false, null, null, "USER@LOCALHOST.COM", "USER@LOCALHOST.COM", "AQAAAAEAACcQAAAAEH76x28x6n0KAHjR67VdW67vETK0RWnwU4yTbquIvWKcb3rAp/rGVCXmDIa/5xeR+A==", null, null, false, "00e84041-2b4e-48eb-8f92-18c22439e6b9", null, false, "user@localhost.com" },
+                    { "ef7547bf-bd4d-485c-b761-a211dd47fa9a", 0, null, "c213b0b2-487b-40d1-a90e-2641291b04f9", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin@localhost.com", true, "Admin", "Admin", false, null, null, "ADMIN@LOCALHOST.COM", "ADMIN@LOCALHOST.COM", "AQAAAAEAACcQAAAAEO/BrNF4qmqDA8oiiEuAH/uwE3lVrZmIEOx9bO0ZD5oGwxLTjsXACG7RMRtHv6YX4A==", null, null, false, "06906982-8b37-4db6-acbd-e541268ddd01", null, false, "admin@localhost.com" }
                 });
 
             migrationBuilder.InsertData(
@@ -367,8 +367,8 @@ namespace GlobalManagementSystem.Web.Migrations
                 columns: new[] { "Id", "DateCreated", "DateModified", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null },
-                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null }
+                    { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "New" },
+                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Used" }
                 });
 
             migrationBuilder.InsertData(
