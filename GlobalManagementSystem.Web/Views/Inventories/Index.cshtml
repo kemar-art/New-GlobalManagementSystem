@@ -37,37 +37,37 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product.Model.ProductType.Make.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product.Model.ProductType.Name)
-            </td>
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product.Model.ProductType.Make.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product.Model.ProductType.Name)
+                    </td>
             
-             <td>
-                @Html.DisplayFor(modelItem => item.Product.Model.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product.Serialnumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product.Unitcost)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QTY)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id"><i class="fa-solid fa-pen-to-square"></i></a> &nbsp;
-                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i></a> &nbsp;
-                <button data-id="@item.Id" class="btn btn-danger deleteBtn" type="button"><i class="fa-solid fa-trash-can"></i></button>
-            </td>
-        </tr>
-}
+                     <td>
+                        @Html.DisplayFor(modelItem => item.Product.Model.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product.Serialnumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product.Unitcost)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QTY)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id"><i class="fa-solid fa-pen-to-square"></i></a> &nbsp;
+                        <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i></a> &nbsp;
+                        <button data-id="@item.Id" class="btn btn-danger deleteBtn" type="button"><i class="fa-solid fa-trash-can"></i></button>
+                    </td>
+                </tr>
+        }
     </tbody>
 </table>
 
@@ -79,7 +79,21 @@
 @section Scripts{
     <script>
         $(function(){
-            $('.table').DataTable();
+            $('.table').DataTable({
+                responsive: {
+                    details: {
+                        display: $.fn.dataTable.Responsive.display.modal({
+                            header: function(row) {
+                                var data = row.data();
+                                return 'Details for '+data[0]+' '+data[1];
+                            }
+                        }),
+                        renderer: $.fn.dataTable.Responsive.renderer.tableAll({
+                            tableClass: 'table'
+                        })
+                    }
+                }
+            });
             $('.deleteBtn').click(function(e){
                 swal({
                     title: "Your about to delete an record!!!",
